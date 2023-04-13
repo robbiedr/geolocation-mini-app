@@ -1,5 +1,5 @@
 
-# Geolocation Project
+# Geolocation API
 
 A Geolocation mini-app
 
@@ -35,3 +35,46 @@ A Geolocation mini-app
   npm run dev
   ```
   
+## API Reference
+
+#### Get treasure boxes
+
+```http
+  GET /treasure-boxes
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `latitude` | `float` | **Required**. Latitude |
+| `longitude` | `float` | **Required**. Longitude |
+| `distance` | `number` | **Required**. Distance (1/10 (km)) |
+| `prizeValue` | `number` | (Optional) Prize value ($10-$30) |
+
+#### Get treasure boxes by IP Address
+
+```http
+  GET /treasure-boxes/ip-address/${ipAddress}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `ipAddress` | `string` | **Required**. IP Address to get location |
+| `distance` | `number` | **Required**. Distance (1/10 (km)) |
+| `prizeValue` | `number` | (Optional) Prize value ($10-$30) |
+
+#### Get data
+
+```http
+  GET /data
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `scope` | `string` | **Required**. Scope of data |
+
+| Scope | Description |
+| :---- | :---------- |
+| `treasures` | Returns data from treasures table |
+| `users` | Returns data from users table |
+| `money_values` | Returns data from money_values table |
+| `treasures-money_values` | Returns data from treasures table + associated money_values data | 

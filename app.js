@@ -14,6 +14,8 @@ app.use(logger);
 
 const treasureBoxesRouter = require('./routes/treasureBoxes');
 app.use('/treasure-boxes', treasureBoxesRouter);
+const dataRouter = require('./routes/data');
+app.use('/data', dataRouter);
 
 app.listen(port, () => {
   console.log(`Geolocation app listening at port ${port}`);

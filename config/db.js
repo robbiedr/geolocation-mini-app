@@ -12,6 +12,7 @@ const {
 // DEFINITIONS
 const treasures = require('../definitions/Treasures');
 const moneyValues = require('../definitions/MoneyValues');
+const users = require('../definitions/Users');
 
 const sequelize = new Sequelize(DB_DATABASE, DB_USERNAME, DB_PASSWORD, {
   host: DB_HOST,
@@ -28,6 +29,7 @@ const db = {
 // MODELS
 db.treasures = treasures(sequelize, Sequelize);
 db.moneyValues = moneyValues(sequelize, Sequelize);
+db.users = users(sequelize, Sequelize);
 
 // ASSOCIATIONS
 db.treasures.hasMany(db.moneyValues, { foreignKey: 'treasure_id' });

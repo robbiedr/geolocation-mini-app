@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "557bdc22-9251-434b-adc4-0cf6a560d323",
+		"name": "Geolocation API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25549392"
+	},
+	"item": [
+		{
+			"name": "Get Treasure Boxes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/treasure-boxes?latitude=14.552036595352455&longitude=121.01696118771324&distance=10&prizeValue=15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"treasure-boxes"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "14.552036595352455"
+						},
+						{
+							"key": "longitude",
+							"value": "121.01696118771324"
+						},
+						{
+							"key": "distance",
+							"value": "10"
+						},
+						{
+							"key": "prizeValue",
+							"value": "15"
+						}
+					]
+				},
+				"description": "Get treasures boxes near the passed location."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Treasure Boxes by IP Address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/treasure-boxes/ip-address/103.36.17.250?distance=10&prizeValue=15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"treasure-boxes",
+						"ip-address",
+						"103.36.17.250"
+					],
+					"query": [
+						{
+							"key": "distance",
+							"value": "10"
+						},
+						{
+							"key": "prizeValue",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/data?scope=treasures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "scope",
+							"value": "treasures",
+							"description": "treasures, users, money_values, treasures-money_values"
+						}
+					]
+				},
+				"description": "Get data from tables.\n\nScopes:\n\n- `treasures` - returns data from treasures table\n- `users` - returns data from users table\n- `money_values` - returns data from money_values table\n- `treasures-money_values` - returns data from treasures table including associated money_values data"
+			},
+			"response": []
+		}
+	]
+}
