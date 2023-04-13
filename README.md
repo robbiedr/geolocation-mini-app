@@ -14,11 +14,11 @@ A Geolocation mini-app
 - Install dependencies with npm
 
   ```bash
-    npm install
+  npm install
   ```
 - Run docker
   ```bash
-    npm run docker
+  npm run docker
   ```
 - Create `.env` file and refer to `.env-sample` file
   ```env
@@ -29,6 +29,11 @@ A Geolocation mini-app
   DB_HOST=127.0.0.1
   DB_PORT=3306
   APP_PORT=3001
+  ```
+- Run migrations and seeders
+  ```bash
+  npm run migrate
+  npm run seed
   ```
 - Run the app 
   ```bash
