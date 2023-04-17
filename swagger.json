@@ -1,0 +1,13 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Geolocation API",
+      "version": "1.0.0"
+    },
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {}
+  }
+  

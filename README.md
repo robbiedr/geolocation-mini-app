@@ -41,6 +41,10 @@ A Geolocation mini-app
   ```
   
 ## API Reference
+### Swagger documentation
+```
+http://localhost:{APP_PORT}/api-docs
+```
 
 #### Get treasure boxes
 

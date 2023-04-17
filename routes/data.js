@@ -10,6 +10,28 @@ const {
    users: Users,
 } = require('../config/db');
 
+/**
+ * @swagger
+ * /data:
+ *   get:
+ *     summary: Get data based on the specified scope
+ *     tags: [Data]
+ *     parameters:
+ *       - in: query
+ *         name: scope
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: The scope of the data to retrieve. Allowed values are 'treasures', 'users', 'money_values', 'treasures-money_values'.
+ *         enum: ['treasures', 'users', 'money_values', 'treasures-money_values']
+ *     responses:
+ *       200:
+ *         description: Data retrieved successfully
+ *       400:
+ *         description: Invalid parameters provided.
+ *       500:
+ *         description: Internal server error
+ */
 router.get('/', async (req, res) => {
     const { scope } = req.query;
 
